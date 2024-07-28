@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 
-host=$(uname -n)
+if [ ! -z $1 ]; then
+    host=$1
+else
+    host=$(uname -n)
+fi
 target=$HOME
 
 # Create the .config folder, otherwise stow will symlink the whole .config
@@ -8,6 +12,7 @@ target=$HOME
 mkdir -p $target/.config
 
 stow -v -R -d general -t $target .
+
 if [ -d $host ]; then
     stow -v -R -d $host -t $target .
 fi
