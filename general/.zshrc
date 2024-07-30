@@ -74,7 +74,9 @@ export EDITOR="nvim"
 #
 alias ls="ls --color=auto"
 alias grep="grep --color=auto"
-alias config="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+alias config="cd ~/.dotfiles && nvim -c LazyGit"
+alias oo="cd ~/personal"
+alias on="nvim -c ObsidianNew"
 
 bindkey -s ^f "fzftmux\n"
 
