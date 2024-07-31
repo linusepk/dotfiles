@@ -25,3 +25,7 @@ vim.keymap.set("n", "<leader>oq", "<cmd>ObsidianQuickSwitch<CR>");
 vim.keymap.set("n", "<leader>ot", "<cmd>ObsidianTemplate<CR>");
 vim.keymap.set("v", "<leader>ot", "\"_d<cmd>ObsidianTemplate<CR>");
 vim.keymap.set("n", "<leader>on", "<cmd>ObsidianNew<CR>");
+vim.keymap.set("n", "<leader>odt", "<cmd>ObsidianToday<CR>");
+vim.keymap.set("n", "<leader>ody", "<cmd>ObsidianYesterday<CR>");
+vim.keymap.set("n", "<leader>odT", "<cmd>ObsidianTomorrow<CR>");
+vim.keymap.set("n", "<leader>of", "<cmd>silent! s/-/ /g<CR><cmd>noh<CR>0wvU$");

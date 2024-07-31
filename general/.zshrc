@@ -77,6 +77,7 @@ alias grep="grep --color=auto"
 alias config="cd ~/.dotfiles && nvim -c LazyGit"
 alias oo="cd ~/personal"
 alias on="nvim -c ObsidianNew"
+alias ont="nvim -c ObsidianNewFromTemplate"
 
 bindkey -s ^f "fzftmux\n"
 

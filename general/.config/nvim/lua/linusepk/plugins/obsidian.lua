@@ -35,7 +35,7 @@ return {
         -- dir = "~/vaults/work",
 
         -- Optional, if you keep notes in a specific subdirectory of your vault.
-        notes_subdir = "0 Zettelkasten",
+        notes_subdir = "zettelkasten",
 
         -- Optional, set the log level for obsidian.nvim. This is an integer corresponding to one of the log
         -- levels defined by "vim.log.levels.*".
@@ -43,7 +43,7 @@ return {
 
         daily_notes = {
             -- Optional, if you keep daily notes in a separate directory.
-            folder = "1 Daily notes",
+            folder = "daily-notes",
             -- Optional, if you want to change the date format for the ID of daily notes.
             date_format = "%Y-%m-%d",
             -- Optional, if you want to change the date format of the default alias of daily notes.
@@ -51,7 +51,7 @@ return {
             -- Optional, default tags to add to each new daily note created.
             default_tags = { "daily-notes" },
             -- Optional, if you want to automatically insert a template from your template directory like 'daily.md'
-            template = "Daily.md"
+            template = "daily.md"
         },
 
         -- Optional, completion of wiki links, local markdown links, and tags using nvim-cmp.
@@ -94,7 +94,7 @@ return {
         new_notes_location = "notes_subdir",
 
         note_id_func = function(title)
-            return title
+            return title:gsub(" ", "-"):gsub("[^A-Za-z0-9-]", ""):lower()
         end,
 
         -- -- Optional, customize how note IDs are generated given an optional title.
@@ -171,7 +171,7 @@ return {
 
         -- Optional, for templates (see below).
         templates = {
-            folder = "2 Templates",
+            folder = "templates",
             date_format = "%Y-%m-%d",
             time_format = "%H:%M:%S",
             -- A map for custom variables, the key should be the variable and the value a function
@@ -192,8 +192,8 @@ return {
         -- file it will be ignored but you can customize this behavior here.
         ---@param img string
         follow_url_func = function(img)
-            vim.fn.jobstart { "qlmanage", "-p", img }  -- Mac OS quick look preview
-            -- vim.fn.jobstart({"xdg-open", url})  -- linux
+            -- vim.fn.jobstart { "qlmanage", "-p", img }  -- Mac OS quick look preview
+            vim.fn.jobstart({"xdg-open", url})  -- linux
             -- vim.cmd(':silent exec "!start ' .. url .. '"') -- Windows
         end,
 
@@ -315,7 +315,7 @@ return {
             -- The default folder to place images in via `:ObsidianPasteImg`.
             -- If this is a relative path it will be interpreted as relative to the vault root.
             -- You can always override this per image by passing a full path to the command instead of just a filename.
-            img_folder = "3 Resources",  -- This is the default
+            img_folder = "resources",  -- This is the default
 
             -- Optional, customize the default name or prefix when pasting images via `:ObsidianPasteImg`.
             ---@return string
