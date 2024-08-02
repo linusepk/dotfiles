@@ -20,8 +20,12 @@ setopt prompt_subst
 
 autoload -U colors && colors
 
+autoload -Uz vcs_info
+precmd() { vcs_info }
+zstyle ":vcs_info:git:*" formats " %F{9}(%f%F{11}%b%f%F{9})%f"
+
 compact_prompt() {
-    echo "%F{13}%~%f "
+    echo "%F{13}%~%f${vcs_info_msg_0_} %B$(prompt_cursor)%b "
 }
 compact_rprompt() {}
 
@@ -35,7 +39,7 @@ prompt_cursor() {
 
 expanded_prompt() {
     echo "
-%F{13}%~%f
+%F{13}%~%f${vcs_info_msg_0_}
 %B$(prompt_cursor)%b "
 }
 expanded_rprompt() {}
