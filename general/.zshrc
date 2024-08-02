@@ -1,6 +1,6 @@
 bindkey -v
 
-autoload -Uz compinit
+autoload -U compinit && compinit -u
 
 # History
 HISTFILE=~/.cache/zsh/histfile
@@ -95,7 +95,7 @@ export EDITOR="nvim"
 # Alias
 alias ls="ls --color=auto"
 alias grep="grep --color=auto"
-alias config="cd ~/.dotfiles && lazygit"
+alias config="lazygit -p ~/.dotfiles"
 alias oo="cd ~/personal"
 alias on="nvim -c ObsidianNew"
 alias ont="nvim -c ObsidianNewFromTemplate"
