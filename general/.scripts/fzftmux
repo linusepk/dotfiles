@@ -11,14 +11,14 @@ fi
 project_name="$(basename $project_dir)"
 
 if [[ -z $TMUX ]]; then
-    if tmux has-session -t $project_name 2> /dev/null; then
-        tmux attach -t $project_name
+    if tmux has-session -t=$project_name 2> /dev/null; then
+        tmux attach -t=$project_name
     else
         tmux new-session -c $project_dir -s $project_name
     fi
 else
-    if ! tmux has-session -t $project_name 2> /dev/null; then
+    if ! tmux has-session -t=$project_name 2> /dev/null; then
         tmux new-session -d -c $project_dir -s $project_name
     fi
-    tmux switch-client -t $project_name
+    tmux switch-client -t=$project_name
 fi
