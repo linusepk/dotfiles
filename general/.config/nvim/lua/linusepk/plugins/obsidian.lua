@@ -28,6 +28,13 @@ return {
                 name = "personal",
                 path = "~/personal",
             },
+            {
+                name = "school",
+                path = "~/school",
+                overrides = {
+                    notes_subdir = "fine",
+                },
+            },
         },
 
         -- Alternatively - and for backwards compatibility - you can set 'dir' to a single path instead of
