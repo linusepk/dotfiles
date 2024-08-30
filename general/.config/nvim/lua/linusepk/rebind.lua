@@ -28,3 +28,4 @@ vim.keymap.set("n", "<leader>odt", "<cmd>ObsidianToday<CR>");
 vim.keymap.set("n", "<leader>ody", "<cmd>ObsidianYesterday<CR>");
 vim.keymap.set("n", "<leader>odT", "<cmd>ObsidianTomorrow<CR>");
 vim.keymap.set("n", "<leader>of", "<cmd>silent! s/-/ /g<CR><cmd>noh<CR>0wvU$");
+vim.keymap.set("n", "<leader>oo", "<cmd>ObsidianOpen<CR>");
