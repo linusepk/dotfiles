@@ -87,9 +87,6 @@ add_path() {
 add_path "$HOME/.scripts"
 
 export MANPAGER="nvim +Man!"
-export GTK_THEME="Adwaita:dark"
-export QT_STYLE_OVERRIDE="Adwaita-Dark"
-export GTK2_RC_FILES="/usr/share/themes/Adwaita-dark/gtk-2.0/gtkrc"
 export EDITOR="nvim"
 
 # Alias
