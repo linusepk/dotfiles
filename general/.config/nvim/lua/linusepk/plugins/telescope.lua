@@ -9,7 +9,8 @@ return {
         { "<leader>pf", function() require("telescope.builtin").find_files() end, mode = "n" },
         { "<C-p>", function() require("telescope.builtin").git_files() end, mode = "n" },
         { "<leader>ps", function() require("telescope.builtin").live_grep({additional_args = {"-U"}}) end, mode = "n" },
-        { "<leader>pv", ":Telescope file_browser<CR>", mode = "n", noremap = true }
+        { "<leader>pv", ":Telescope file_browser<CR>", mode = "n", noremap = true },
+        { "<leader>h", function() require("telescope.builtin").help_tags() end, mode = "n" },
     },
     config = function()
         require("telescope").setup {
