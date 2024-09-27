@@ -14,8 +14,8 @@ return {
         local cmp = require'cmp'
         local luasnip = require'luasnip'
 
-        vim.diagnostic.config {     
-            float = { border = "rounded" }, 
+        vim.diagnostic.config {
+            float = { border = "rounded" },
         }
 
         vim.lsp.handlers['textDocument/hover'] = vim.lsp.with(
