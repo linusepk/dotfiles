@@ -20,7 +20,10 @@ vim.opt.scrolloff = 8;
 vim.opt.updatetime = 50;
 vim.g.c_syntax_for_h = true;
 
-vim.opt.conceallevel = 2
+vim.opt.conceallevel = 2;
+
+vim.opt.list = true;
+vim.opt.listchars = { trail = "." };
 
 set = {};
 
