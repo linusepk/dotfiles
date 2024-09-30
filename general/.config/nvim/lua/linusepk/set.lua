@@ -23,7 +23,7 @@ vim.g.c_syntax_for_h = true;
 vim.opt.conceallevel = 2;
 
 vim.opt.list = true;
-vim.opt.listchars = { trail = "." };
+vim.opt.listchars = { trail = ".", tab = "  " };
 
 set = {};
 
